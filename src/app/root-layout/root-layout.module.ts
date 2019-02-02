@@ -13,9 +13,11 @@ import {
 
 import { RootLayoutRoutingModule } from './root-layout-routing.module';
 import { RootLayoutComponent } from './root-layout.component';
+import { SidebarComponent } from './nav/sidebar/sidebar.component';
+import { TopnavComponent } from './nav/topnav/topnav.component';
 
 @NgModule({
-    declarations: [RootLayoutComponent],
+    declarations: [RootLayoutComponent, SidebarComponent, TopnavComponent],
     imports: [
         CommonModule,
         RootLayoutRoutingModule,
