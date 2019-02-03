@@ -10,6 +10,10 @@ export class PlantaService {
     constructor(private http: HttpClient) { }
 
     getAllOnPage(page: string): Observable<any> {
-        return this.http.get(this.API + '?page=' + page);
+        return this.http.get(this.API + '/page?page=' + page);
+    }
+
+    getByEspecieId(especieId: string): Observable<any> {
+        return this.http.get(this.API + '/especie/' + especieId);
     }
 }
