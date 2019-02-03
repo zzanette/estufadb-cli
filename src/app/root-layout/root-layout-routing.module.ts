@@ -15,7 +15,15 @@ const routes: Routes = [
             {
                 path: 'dashboard',
                 loadChildren: './dashboard/dashboard.module#DashboardModule'
-            }
+            },
+            {
+                path: 'plantas',
+                loadChildren: './plantas/plantas.module#PlantasModule'
+            },
+            {
+                path: 'plantas/especie/:id',
+                loadChildren: './plantas/plantas.module#PlantasModule'
+            },
         ]
     }
 ];

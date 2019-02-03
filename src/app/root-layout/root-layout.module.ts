@@ -10,15 +10,13 @@ import {
     MatToolbarModule
 } from '@angular/material';
 
-
 import { RootLayoutRoutingModule } from './root-layout-routing.module';
 import { RootLayoutComponent } from './root-layout.component';
 import { SidebarComponent } from './nav/sidebar/sidebar.component';
 import { TopnavComponent } from './nav/topnav/topnav.component';
-import { PlantasComponent } from './plantas/plantas.component';
 
 @NgModule({
-    declarations: [RootLayoutComponent, SidebarComponent, TopnavComponent, PlantasComponent],
+    declarations: [RootLayoutComponent, SidebarComponent, TopnavComponent],
     imports: [
         CommonModule,
         RootLayoutRoutingModule,
