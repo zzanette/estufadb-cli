@@ -28,4 +28,17 @@ export class PlantasComponent implements OnInit {
         );
     }
 
+    getClassStatusPlanta = (planta) => {
+        const tolerancia = 5;
+
+        if (planta.umidadeAtualPlanta < planta.umidadeMinimaEspecie
+            || planta.umidadeAtualPlanta > planta.umidadeMaximaEspecie
+            || planta.umidadeAtualPlanta === planta.umidadeMaximaEspecie
+            || planta.umidadeAtualPlanta === planta.umidadeMinimaEspecie
+        ) {
+            return {bgColor: 'danger', description: 'Umidade comprometida.'};
+        }
+
+        return {bgColor: 'success', description: 'Umidade ok.'};
+    }
 }

@@ -4,7 +4,10 @@
             <mat-icon class="icon-lg">{{icon}}</mat-icon>
         </div>
         <mat-card-title class="title-umidade">{{label}}</mat-card-title>
-        <mat-card-subtitle class="tite-sensor">Umidade: {{count}}%</mat-card-subtitle>
+        <mat-card-subtitle class="tite-sensor">
+            <p>Umidade: {{umidadeAtual}}%</p>
+            <p>Ideal: Min {{umidadeMin}}% - Max {{umidadeMax}}%</p>
+        </mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions>
         {{description}}

@@ -1,9 +1,14 @@
 
 <h2>Umidade atual das Plantas</h2>
 
-<div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
-    <div fxFlex *ngFor="let planta of plantas | async">
-        <app-stat [bgClass]="'danger'" [icon]="'local_florist'" [count]="planta.umidadeAtualPlanta" [label]="planta.codigoSensor"></app-stat>
+<div class="mb-20" fxLayout="row wrap" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
+    <div fxFlex="30" *ngFor="let planta of plantas | async" class="umidade-planta">
+        <app-stat [bgClass]="getClassStatusPlanta(planta).bgColor"  
+        [icon]="'local_florist'" 
+        [umidadeAtual]="planta.umidadeAtualPlanta"
+        [umidadeMin]="planta.umidadeMinimaEspecie" 
+        [umidadeMax]="planta.umidadeMaximaEspecie"  
+        [label]="planta.codigoSensor" 
+        [description]="getClassStatusPlanta(planta).description"></app-stat>
     </div>
-
 </div>
