@@ -1,0 +1,31 @@
+<h2>Cadastro de Espécies de Plantas</h2>
+
+<div class="mat-elevation-z5">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+            <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="umidadeMinima">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Umidade Minima </th>
+            <td mat-cell *matCellDef="let row"> {{row.umidadeMinima}} % </td>
+        </ng-container>
+
+        <ng-container matColumnDef="umidadeMaxima">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Umidade Máxima </th>
+            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.umidadeMaxima}} % </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

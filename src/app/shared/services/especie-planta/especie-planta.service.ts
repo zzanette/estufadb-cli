@@ -12,4 +12,18 @@ export class EspeciePlantaService {
     getAllOnPage(page: string): Observable<any> {
         return this.http.get(this.API + '/page?page=' + page);
     }
+
+    getPage(page: number = 0, linesPerPage: number = 24, orderBy: string = 'id', direction: string = 'asc'): Observable<any> {
+        console.log(this.API
+            + '/page?page=' + page
+            + '&linesPerPage=' + linesPerPage
+            + '&orderBy=' + orderBy
+            + '&direction=' + direction);
+        return this.http.get(this.API
+            + '/page?page=' + page
+            + '&linesPerPage=' + linesPerPage
+            + '&orderBy=' + orderBy
+            + '&direction=' + direction
+        );
+    }
 }

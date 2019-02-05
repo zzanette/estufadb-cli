@@ -24,6 +24,10 @@ const routes: Routes = [
                 path: 'plantas/especie/:id',
                 loadChildren: './plantas/plantas.module#PlantasModule'
             },
+            {
+                path: 'especies-planta',
+                loadChildren: './especie-planta/especie-planta.module#EspeciePlantaModule'
+            },
         ]
     }
 ];
