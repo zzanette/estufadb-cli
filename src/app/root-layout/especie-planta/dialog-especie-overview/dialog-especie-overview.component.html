@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Nova Espécie</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Nome da Espécie"  [(ngModel)]="data.nome" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" placeholder="Umidade Mínima" [(ngModel)]="data.umidadeMinima" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" placeholder="Umidade Máxima" [(ngModel)]="data.umidadeMaxima" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Url da Imagem" [(ngModel)]="data.imgUrl">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+</div>
