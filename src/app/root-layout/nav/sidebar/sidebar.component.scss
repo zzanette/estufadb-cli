@@ -19,17 +19,8 @@
     }
 }
 
-.nested-menu {
-    .nested {
-        list-style-type: none;
-    }
-    .submenu {
-        display: none;
-        height: 0;
-    }
-    & .expand {
-        &.submenu {
-            display: block;
-        }
+@media screen and (max-width: 992px) {
+    #sidebar {
+        left: -250px;
     }
 }
