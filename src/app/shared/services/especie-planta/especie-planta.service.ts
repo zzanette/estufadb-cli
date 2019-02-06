@@ -26,4 +26,12 @@ export class EspeciePlantaService {
             + '&direction=' + direction
         );
     }
+
+    deleteById(id: number): void {
+        this.http.delete(this.API + '/' + id);
+    }
+
+    post(especieObjt): Observable<any> {
+        return this.http.post(this.API, especieObjt, {observe: 'response'});
+    }
 }
